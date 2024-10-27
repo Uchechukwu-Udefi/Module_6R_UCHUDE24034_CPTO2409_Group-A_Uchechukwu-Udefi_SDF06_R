@@ -49,3 +49,21 @@ You will submit the GitHub project link with your final project files to the LMS
 1. Submit the GitHub project link with your final project files to the LMS. You will find this in the LMS [**[Projects](https://learn.codespace.co.za/projects)**] tab.
 
 Enjoy the project, and have fun turning HTML into a stylish Instagram profile!
+
+
+
+**HOW I did my project**
+
+I first clone the starter code, update the HTML file and style the provided HTML file in seperate CSS file
+
+- The code is seperated in sections for easy understanding
+    1. base style
+    2. header secton
+    3. main section
+    4. hover section
+    4. loader section
+
+- CSS styling is then applied to the HTML structure of each section to achieve:
+    1. A design resembling an Instagram profile.
+    2. Proficiency in CSS layout techniques, including the use of flexbox and grid.
+    3. A responsive web page that adapts to different screen sizes.
