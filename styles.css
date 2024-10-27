@@ -204,15 +204,15 @@ main > .container {
 .gallery {
     display: grid;
     width: 100%;
-    height: 100vh;
-    padding: 10px;
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    
+    padding: 5px;
+    grid-template-columns: repeat(3, minmax(100%, 1fr));
     grid-auto-flow: dense;
-    gap: 10px;
+    gap: 5px;
     place-items: center;
     position: relative;
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     transition: .5s;
     background-color: #ffffff;
     
@@ -220,7 +220,7 @@ main > .container {
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 500px) {
 	.gallery {
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(4, 1fr);
@@ -239,10 +239,11 @@ main > .container {
 
 .gallery-item {
     position: relative;
-    width: 200px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .gallery-item img {
@@ -266,6 +267,7 @@ main > .container {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 /* Hover section */
 
 .profile-edit-btn:hover {
