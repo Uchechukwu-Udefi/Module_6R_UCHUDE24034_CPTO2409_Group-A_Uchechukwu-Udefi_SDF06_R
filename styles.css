@@ -36,7 +36,7 @@ header > .container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: left;
+    justify-content:center;
     width: 100%;
     padding: 10px;
     
@@ -45,9 +45,18 @@ header > .container {
 
 .profile {
     padding: 10px;
+    margin: 10px;
+}
+
+.profile-image img {
+    border: 10px solid #ffffff;
+    border-radius: 50%;
+    background-color: #dddddd;
+    box-shadow: 0 4px 6px 0px #262626, 0 6px 10px 0 #262626;
 }
 
 .profile-settings {
+    margin: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -56,14 +65,18 @@ header > .container {
 .profile-user-settings {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-    .btn profile-edit-btn {
-        height: 10px;
+    .profile-edit-btn {
+        height: 20px;
+        width: 100px;
+        position: relative;
     }
 
-    .btn profile-settings-btn {
+    .profile-settings-btn {
         border: none;
+        background: none;
     }
 
     ul {
@@ -215,7 +228,7 @@ main > .container {
     width: 100%;
     height: 100vh;
     padding: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
     grid-auto-flow: dense;
     gap: 10px;
     place-items: center;
@@ -224,25 +237,28 @@ main > .container {
     margin-bottom: 5px;
     transition: .5s;
     background-color: #ffffff;
+    
+    
 }
 
 
 @media only screen and (min-width: 768px) {
 	.gallery {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(6, 1fr);
-		max-width: 583px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		max-width: 500px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
 	
 	.gallery {
-		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		max-width: 1165px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		max-width: 1000px;
 	}
 }
+
 
 .gallery-item {
     width: 100%;
@@ -250,18 +266,20 @@ main > .container {
     position: relative;
 }
 
-.gallery-item img {
+.gallery-image {
     width: 100%;
     height: 214px;
     object-fit: cover;
     transition: .5s;
+    
     display: block;
+    
     margin: auto;
     backface-visibility: hidden;
-    vertical-align: top;
+    
 }
 
-.gallery-item-info {
+.gallery-image .gallery-item-info {
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -271,28 +289,36 @@ main > .container {
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
     right: 0;
+    z-index: 2;
     margin: auto;
     opacity: 0;
     transform: scale(0);
-    transition: .5s;
+    transition: 0.5s;
+
+    
 }
 
-.gallery-item-info > * {
+.visually-hidden > * {
     transform: translateY(25px);
     transition: transform 0.6s;
 }
 
 /* Hover section */
 
-.gallery-item-info:hover {
-    opacity: 1;
-    transform: scale(1);
-    transition: .5s;
+.profile-edit-btn:hover {
+    color: #ffffff;
+    background-color: #262626;
+    transition: 0.2 ease-in ;
 }
 
-.gallery-item-info:before,
-.gallery-item-info:after {
+.visually-hidden:hover {
+    opacity: 1;
+}
+
+.visually-hidden:before,
+.visually-hidden:after {
     background-color: #262626;
     border-top: 32px solid #262626;
     border-bottom: 32px solid #262626;
@@ -308,6 +334,18 @@ main > .container {
     transform: scaleY(2);
 }
 
+.gallery-image:hover:before,
+.gallery-image:hover:after {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.gallery-item:hover > img {
+    opacity: 0.7;
+}
+.gallery-image:hover {
+    opacity: 1;
+}
 
 /* loader section ============================================ */
 
