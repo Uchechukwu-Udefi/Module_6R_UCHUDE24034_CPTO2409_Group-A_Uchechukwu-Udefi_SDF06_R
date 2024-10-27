@@ -29,23 +29,27 @@ img {
 header > .container {
     background-color: #ffffff; 
     margin-bottom: 20px;
-    padding: 50px;
+    margin-top: 20px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content:center;
     width: 100%;
-    padding: 10px;
+    
     
 }
 
     .profile {
-        padding: 10px;
+        height: 100%;
+        padding: 12px;
         margin: 10px;
     }
 
         .profile-image img {
-            border: 10px solid #ffffff;
+            height: 120px;
+            width: 120px;
+            border: 5px solid #ffffff;
             border-radius: 50%;
             background-color: #dddddd;
             box-shadow: 0 4px 6px 0px #262626, 0 6px 10px 0 #262626;
@@ -95,7 +99,7 @@ main > .container {
 .gallery {
     display: grid;
     width: 100%;
-    
+    height: 100%;
     padding: 5px;
     grid-template-columns: repeat(3, minmax(100%, 1fr));
     grid-auto-flow: dense;
@@ -164,7 +168,13 @@ main > .container {
 .profile-edit-btn:hover {
     color: #ffffff;
     background-color: #262626;
-    transition: 0.2 ease-in ;
+    transition: 0.2 ease;
+}
+
+.profile-settings-btn:hover {
+    border-radius: 50%;
+    background-color: #dddddd;
+    transition: 0.2 ease;
 }
 
 .gallery-item:hover .gallery-item-info {
